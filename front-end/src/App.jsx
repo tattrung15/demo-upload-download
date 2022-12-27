@@ -15,17 +15,6 @@ function App() {
   }, [controller]);
 
   const handleDownload = async () => {
-    // axios
-    //   .get("http://localhost:5000/download", {
-    //     responseType: "blob",
-    //     onDownloadProgress: (event) => {
-    //       const progress = Math.round((100 * event.loaded) / event.total);
-    //     },
-    //     signal: controller.signal,
-    //   })
-    //   .then((res) => {
-    //     saveFile(res.data, getFileName(res.headers["content-disposition"]));
-    //   });
     Object.assign(document.createElement("a"), {
       href: "http://localhost:5000/download",
     }).click();

@@ -8,7 +8,7 @@ const { downloadFile } = require("./helper");
 
 const app = express();
 
-app.use(cors({ exposedHeaders: ["Content-Disposition"] }));
+app.use(cors());
 app.use(express.json());
 
 app.post("/upload", async (req, res) => {
